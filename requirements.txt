@@ -1,0 +1,6 @@
+pip install numpy
+pip install matplotlib
+pip install --upgrade matplotlib
+
+$ python
+>>> import mpl_toolkits
