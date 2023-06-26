@@ -29,8 +29,12 @@ $max\ f(x)$ : $x \ \epsilon \ [x_{min}, \ x_{max}]$
 - Variable is coded as a binary string of fixed length.
 
 ```r
-0, 1, 0, ... , 1, 1 chromosome
-each cell is a "gene"
++---+---+---+---+---+---+---+
+ | 0 | 1 | 0 | ... | 1 | 1 |    Chromosome
++---+---+---+---+---+---+---+
+                |
+                v
+       each cell is a gene
 
 - The lower bound is coded to 0 0 0 _ _ _ 0
 - The upper bound is coded to 1 1 1 _ _ _ 1
