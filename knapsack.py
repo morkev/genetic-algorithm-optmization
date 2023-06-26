@@ -155,7 +155,7 @@ class Knapsack(object):
         self.plot_fitness_values()
 
 
-# properties for this particular problem
+# Properties for this particular problem
 weights = [12, 7, 11, 8, 9]
 profits = [24, 13, 23, 15, 16]
 opt = [0, 1, 1, 1, 0]
