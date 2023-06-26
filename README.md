@@ -2,7 +2,7 @@
 
 Today I came across a video about optimization and genetic algorithms, published by Ahmad Hably [here](https://www.youtube.com/watch?v=x-eqUoCIXi8). After taking some notes, I was delighted and thought it would be interesting to create an implementation of a genetic algorithm to solve the knapsack problem.
 
-What did I code? Well, I am using a genetic algorithm to solve the Knapsack problem with a specific limit or capacity C and a given set of N objects. The Knapsack contains objects with values and weights, and we seek to maximize profit while staying under the space limit. Our fitness function sums up the profits of the objects in the Knapsack.
+<b>What did I code?</b> Well, I am using a genetic algorithm to solve the Knapsack problem with a specific limit or capacity C and a given set of N objects. The Knapsack contains objects with values and weights, and we seek to maximize profit while staying under the space limit. Our fitness function sums up the profits of the objects in the Knapsack.
 
 
 ## Theoretical Overview
