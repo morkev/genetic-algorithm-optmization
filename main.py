@@ -9,7 +9,8 @@ import copy
 import matplotlib.pyplot as plt
 
 # Defines variables for input
-Item = collections.namedtuple('backpack', 'weight value')  # named tuple to store the weigts and values
+# Named tuple to store the weights and values
+Item = collections.namedtuple('backpack', 'weight value')
 population_size = 0
 max_generations = 0
 crossover_probability = 0.0
@@ -17,7 +18,7 @@ mutation_probability = 0.0
 backpack_capacity = 0
 max_weight = 0
 
-# namedTuple: its values are accessible through fields and indices
+# namedTuple: its values are accessible through fields and as indices
 Individual = collections.namedtuple('population', 'chromosome weight value')
 
 # Generate population, given the size and backpack_capacity
@@ -142,11 +143,11 @@ def calculate_fitness(population, items, max_weight):
 
     return population
 
-# Runs Genetic Algorithm completly step by step
+# Runs Genetic Algorithm completely step by step
 def runGA():
     population = generate_population(population_size, backpack_capacity)
     print(max_generations)
-    
+
     value = []
     iteration = []
     best_solution = None
@@ -169,28 +170,28 @@ def runGA():
 
         value.append(best_solution.value)
         iteration.append(i)
-        
+
         # Prints every 100th generation results
         if i % 100 == 0:
-            print ('\nCurrent generation..: {}'.format(i))
-            print ('Best solution so far: {}'.format(best_solution.value))
+            print('\nCurrent generation..: {}'.format(i))
+            print('Best solution so far: {}'.format(best_solution.value))
 
-    print (' solution found:')
-    print ('\nWeight: {}'.format(best_solution.weight))
-    print ('Value.: {}'.format(best_solution.value))
-    print ('\nBackpack configuration: {}'.format(best_solution.chromosome))
+    print(' solution found:')
+    print('\nWeight: {}'.format(best_solution.weight))
+    print('Value.: {}'.format(best_solution.value))
+    print('\nBackpack configuration: {}'.format(best_solution.chromosome))
 
     # Plots the graph
-    plt.plot(iteration, value)
+    plt.plot(iteration, value, marker='o', linestyle='-', color='blue')
     plt.xlabel('Generation')
     plt.ylabel('Best Solution Value')
     plt.title('Evolution of Best Solution Value')
     plt.show()
 
 if __name__ == "__main__":
-    # Initializes population size as well as: 
+    
+    # Initializes population size as well as:
     # crossover and mutation probabilities
-
     population_size = randint(50, 200)
     max_generations = randint(100, 1000)
     crossover_probability = round(random.uniform(low=0.3, high=1.0), 1)
@@ -209,15 +210,15 @@ if __name__ == "__main__":
     for i in range(backpack_capacity):
         items.append(
             Item(
-                weight=randint(1, max_item_weight), 
+                weight=randint(1, max_item_weight),
                 value=randint(0, max_item_value))
         )
 
-    print ('\n\n--- Generated Parameters -----')
-    print ('Population size......: {}' .format(population_size))
-    print ('Number of generations: {}'.format(max_generations))
-    print ('Crossover probability: {}'.format(crossover_probability))
-    print ('Mutation probability.: {}'.format(mutation_probability))
-    print ('Backpack capacity....: {}'.format(backpack_capacity))
-    print ('Max backpack weight..: {}'.format(max_weight))
+    print('\n\n--- Generated Parameters -----')
+    print('Population size......: {}'.format(population_size))
+    print('Number of generations: {}'.format(max_generations))
+    print('Crossover probability: {}'.format(crossover_probability))
+    print('Mutation probability.: {}'.format(mutation_probability))
+    print('Backpack capacity....: {}'.format(backpack_capacity))
+    print('Max backpack weight..: {}'.format(max_weight))
     runGA()
