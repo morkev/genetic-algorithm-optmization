@@ -6,7 +6,7 @@ Today I came across a video about optimization and genetic algorithms, published
 
 
 ## Theoretical Overview
-Rather than exploring a single starting point, exploration is initialized by a set of randomly generated potential solutions - these are known as deign points or population.
+Rather than exploring a single starting point, exploration is initialized by a set of randomly generated potential solutions - these are known as design points or population.
 The population of solutions, at each iteration, are updated into a new population through the application of three operators: <b>Selection</b>, <b>Cross_Over</b> and <b>Mutation</b>.
 
 | Selection | Cross_Over & Mutation |
@@ -45,6 +45,8 @@ The length of the chromosome (binary string) is determined from the targeted acc
 - $with\ E\ = \sum_{i=0}^{l-1} \ b{_i} 2^i$
 
 A fitness function (related to the objective function) can now be computed, and will be used to perform the "selection" process.
+
+---
 
 ### Maximization Problem
 Fitness can be taken equal to the objective function.
